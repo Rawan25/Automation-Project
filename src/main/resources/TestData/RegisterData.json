@@ -1,0 +1,17 @@
+{
+  "username": "test",
+  "password": "password",
+  "email": "XYZ@test.com",
+  "lastname": "account",
+  "company": "dummy company",
+  "address1" : "0st, address one",
+  "address2" : "0st, address two",
+  "state": "Alexandria",
+  "city": "Alex",
+  "zipcode": "01234",
+  "mobile": "0123456789",
+  "day": "25,",
+  "month": "8",
+  "year": "1998",
+  "correct_email": "test@test.com"
+}
