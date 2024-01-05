@@ -1,0 +1,6 @@
+{
+  "username": "test",
+  "email": "test@test.com",
+  "subject": "Test the automation",
+  "message": "Here a dummy email body to test the automation website so we can push it to github"
+}

@@ -3,7 +3,8 @@ package Pages;
 import Utility.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+
+import java.io.IOException;
 
 public class RegisterScreen {
     private WebDriver driver;
@@ -87,19 +88,16 @@ public class RegisterScreen {
     }
 
     public RegisterScreen clickOnDayDropdown(String day) {
-        Utilities.clickOnButton(driver, daysList);
         Utilities.selectFromDropdown(driver, daysList,day);
         return this;
     }
 
     public RegisterScreen selectMonthOFBirth(String month) {
-        Utilities.clickOnButton(driver,monthsList);
         Utilities.selectFromDropdown(driver, monthsList, month);
         return this;
     }
 
     public RegisterScreen selectYearOFBirth(String year) {
-        Utilities.clickOnButton(driver,yearsList);
         Utilities.selectFromDropdown(driver, yearsList, year);
         return this;
     }
@@ -218,8 +216,8 @@ public class RegisterScreen {
         Utilities.clickOnButton(driver,logoutButton);
         return this;
     }
-    public Boolean assertCurrentURL(){
-        return driver.getCurrentUrl().equals(url);
+    public Boolean assertCurrentURL() throws IOException {
+        return driver.getCurrentUrl().equals(Utilities.getPropertyValue("Login_Screen"));
     }
     public boolean checkSignupErrorMessage(){
         return Utilities.isElementVisible(driver,signupErrorMessage);

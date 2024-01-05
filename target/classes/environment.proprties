@@ -1,2 +1,3 @@
-URL="https://automationexercise.com/"
-Login_Screen="https://automationexercise.com/login"
+URL=https://automationexercise.com/
+Login_Screen=https://automationexercise.com/login
+TestCases_Screen=https://automationexercise.com/test_cases
