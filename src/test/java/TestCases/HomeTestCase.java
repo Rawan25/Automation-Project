@@ -22,7 +22,6 @@ public class HomeTestCase {
     @BeforeMethod
     public void setUp() throws IOException {
         setUpDriver("Edge");
-        setUpDriver("Edge");
         getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         getDriver().get(Utilities.getPropertyValue("URL"));

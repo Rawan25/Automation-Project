@@ -103,7 +103,7 @@ public class RegisterScreen {
     }
 
     public RegisterScreen clickOnSignUpCheckBox() {
-        Utilities.clickOnButton(driver, signUpCheckBox);
+        Utilities.clickOnButton(driver, signUpCheckBox); //
         return this;
     }
 

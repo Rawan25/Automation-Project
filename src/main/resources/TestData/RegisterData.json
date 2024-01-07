@@ -10,8 +10,12 @@
   "city": "Alex",
   "zipcode": "01234",
   "mobile": "0123456789",
-  "day": "25,",
-  "month": "8",
+  "day": "25",
+  "month": "August",
   "year": "1998",
-  "correct_email": "test@test.com"
+  "correct_email": "test@test.com",
+  "country": "India",
+  "Exist_Name" : "rawan",
+  "Exist_Mail" :"Rawanali0807@gmail.com",
+  "Exist_Password": "123"
 }

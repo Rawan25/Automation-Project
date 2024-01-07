@@ -9,8 +9,9 @@ public class ProductScreen {
     private WebDriver driver;
     private final String URL = "https://automationexercise.com/products";
     private final By productList = By.className("features_items");
-    private final By firstProduct = By.xpath("div[@class='features_items']/div[2]/div/div[2]/ul/li/a");
-//    /html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a
+    private final By firstProduct = By.xpath("a[@href='/product_details/1']/i");
+//    /html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a/i
+    //<a href="/product_details/1" style="color: brown;"><i class="fa fa-plus-square"></i>View Product</a>
     private final By firstProductName = By.xpath("div[class='product-information']/h2");
     private final By firstProductCategory = By.xpath("div[class='product-information']/p");
     private final By firstProductPrice = By.xpath("div[class='product-information']/span/span");

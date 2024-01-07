@@ -36,9 +36,9 @@ public final class ContactUsTestCase {
 
     @Test(priority = 2,description = "Verify success message 'Success! Your details have been submitted " +
             "successfully.' is visible")
-    public void sendEmail(){
+    public void sendEmail() {
         new ContactUsScreen(getDriver()).clickOnContactUsButton()
-                .setName(Utilities.getJsonData("ContactUsData","username"))
+                .setName(Utilities.getJsonData("ContactUsData", "username"))
                 .setEmail(Utilities.getJsonData("ContactUsData", "email"))
                 .setSubject(Utilities.getJsonData("ContactUsData", "subject"))
                 .setMessage(Utilities.getJsonData("ContactUsData", "message"))

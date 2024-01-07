@@ -22,8 +22,7 @@ public class LoginTestCases {
 
     @BeforeMethod
     public void setUp() throws IOException {
-        setUpDriver("Edge");
-        setUpDriver("Edge");
+        setUpDriver("Chrome");
         getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         getDriver().get(Utilities.getPropertyValue("URL"));
@@ -60,8 +59,8 @@ public class LoginTestCases {
         new RegisterScreen(getDriver()).clickOnSignUpLoginButton();
         Assert.assertTrue( new RegisterScreen(getDriver()).checkLoginLabelIsVisible());
 
-        new RegisterScreen(getDriver()).setLoginInput(Utilities.getJsonData("RegisterData", "correct_email"))
-                .setPasswordLoginInput(Utilities.getJsonData("RegisterData", "password"))
+        new RegisterScreen(getDriver()).setLoginInput(Utilities.getJsonData("RegisterData", "Exist_Mail"))
+                .setPasswordLoginInput(Utilities.getJsonData("RegisterData", "Exist_Password"))
                 .clickOnLoginButton();
         Assert.assertTrue(new RegisterScreen(getDriver()).checkAccountLoggedIn());
 
@@ -75,8 +74,8 @@ public class LoginTestCases {
         new RegisterScreen(getDriver()).clickOnSignUpLoginButton();
         Assert.assertTrue( new RegisterScreen(getDriver()).checkLoginLabelIsVisible());
 
-        new RegisterScreen(getDriver()).setNewUserName(Utilities.getJsonData("RegisterData","username"))
-                .setNewUserEmail(Utilities.getJsonData("RegisterData","correct_email"))
+        new RegisterScreen(getDriver()).setNewUserName(Utilities.getJsonData("RegisterData","Exist_Name"))
+                .setNewUserEmail(Utilities.getJsonData("RegisterData","Exist_Mail"))
                 .clickOnSignUpButton();
 
         Assert.assertTrue(new RegisterScreen(getDriver()).checkSignupErrorMessage());
